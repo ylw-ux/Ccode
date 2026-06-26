@@ -91,42 +91,36 @@
 
 //下面来写一下正确的回文数操作 你采用的是数组正反指针对撞法
 //先把我们的这个数字来来写进一个数组里
-//int main(){
-//	int n,size=0;
-//	scanf("%d",&n);
-//	if(n<0){
-//		
-//	
-//		printf("WOrse num");
-//		return 0;
-//	}
-//	int num = n;
-//	int m =n;
-//	do{size++;
-//		m = m/10;
-//	}while(m!=0);
-//	
-//	printf(" cnt = %d",size);
-//	int * arr = (int*)malloc(sizeof(int)*size);
-//	for(int i=0;i<size;i++){
-//		arr[i] = num%10;
-//		num = num/10; 
-//	}
-////	int j=0;
-////	while(){
-////		printf("%d\n",arr[j]);
-////	}
-//	for(int i=0;i<size/2;i++){
-//		if(arr[i] != arr[size-1-i]){
-//			printf("No");
-//			free(arr);
-//			return 0;
-//		}
-//	}
-//	printf("Yes");
-//	free(arr);
-//	return 0; 
-//}
+int main(){
+	int n,size=0;
+	scanf("%d",&n);
+	if(n<0){
+		printf("WOrse num");
+		return 0;
+	}
+	int num = n;
+	int m =n;
+	do{size++;
+		m = m/10;
+	}while(m!=0);
+	
+	printf(" cnt = %d",size);
+	int * arr = (int*)malloc(sizeof(int)*size);
+	for(int i=0;i<size;i++){
+		arr[i] = num%10;
+		num = num/10; 
+	}
+	for(int i=0;i<size/2;i++){
+		if(arr[i] != arr[size-1-i]){
+			printf("No");
+			free(arr);
+			return 0;
+		}
+	}
+	printf("Yes");
+	free(arr);
+	return 0; 
+}
 
 
 
