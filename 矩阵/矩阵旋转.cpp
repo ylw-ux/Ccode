@@ -27,7 +27,7 @@ int main (){
 	int arr4 [n][n];
 	for(int i=0;i<n;i++){
 		for(int j =0;j<n;j++){
-			arr3[i][j] = arr[n-1-j][n-1-i];
+			arr3[i][j] = arr[n-1-i][n-1-j];
 		}
 	}
 //¾ØÕó·­×ª

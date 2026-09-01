@@ -8,13 +8,15 @@ int main(){
 	char str[100];
 //    scanf("%s", str);
 	fgets(str, sizeof(str), stdin);
-    int i;i=0;
-    int flag;flag=0;
+    int i;
+	i=0;
+    int flag;
+	flag=0;
     int cnt=0;
 	for(i=0;i<100;i++){
     	if((str[i]>='A'&&str[i]<='Z')||(str[i]>='a'&&str[i]<='z')){
     		flag=1;
-
+    		
 		}
 		if((str[i] == ' ' || str[i] == '\0')&& (flag==1)){
 			flag=2;
